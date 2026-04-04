@@ -449,6 +449,19 @@ button { cursor: none; }
     transform: translateY(-2px);
 }
 
+.btn-download {
+    background: transparent;
+    color: var(--accent-secondary);
+    border: 1px solid rgba(0, 212, 255, 0.25);
+}
+
+.btn-download:hover {
+    border-color: var(--accent-secondary);
+    background: rgba(0, 212, 255, 0.08);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 25px rgba(0, 212, 255, 0.15);
+}
+
 /* --- Hero Stats --- */
 .hero-stats {
     display: flex;
