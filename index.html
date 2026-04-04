@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aric Nguyen — Data Engineer & Analytics Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cursor glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+
+    <!-- Star canvas -->
+    <canvas id="starfield"></canvas>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <a href="#" class="nav-logo">
+            <span class="logo-bracket">&lt;</span>AN<span class="logo-bracket">/&gt;</span>
+        </a>
+        <div class="nav-links">
+            <a href="#about" class="nav-link" data-text="About">About</a>
+            <a href="#skills" class="nav-link" data-text="Skills">Skills</a>
+            <a href="#experience" class="nav-link" data-text="Experience">Experience</a>
+            <a href="#projects" class="nav-link" data-text="Projects">Projects</a>
+            <a href="#education" class="nav-link" data-text="Education">Education</a>
+            <a href="#contact" class="nav-link" data-text="Contact">Contact</a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#skills" class="mobile-link">Skills</a>
+        <a href="#experience" class="mobile-link">Experience</a>
+        <a href="#projects" class="mobile-link">Projects</a>
+        <a href="#education" class="mobile-link">Education</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                <span>Available for opportunities</span>
+            </div>
+            <h1 class="hero-name">
+                <span class="line line-1">
+                    <span class="word" style="--delay: 0">Aric</span>
+                    <span class="word" style="--delay: 1">Nguyen</span>
+                </span>
+            </h1>
+            <div class="hero-title-wrapper">
+                <div class="hero-title">
+                    <span class="title-line" style="--delay: 2">Data Engineer</span>
+                    <span class="title-separator">·</span>
+                    <span class="title-line" style="--delay: 3">Analytics Engineer</span>
+                </div>
+            </div>
+            <p class="hero-description">
+                Building production-grade data platforms on <span class="highlight">Microsoft Fabric</span> & <span class="highlight">Azure</span>.<br>
+                Metadata-driven. Git-trackable. Scalable by design.
+            </p>
+            <div class="hero-cta">
+                <a href="#experience" class="btn btn-primary">
+                    <span>Explore My Work</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7.8H7.8"/></svg>
+                </a>
+                <a href="#contact" class="btn btn-ghost">
+                    <span>Get In Touch</span>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number" data-count="3">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-count="15">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">BI Reports Delivered</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-count="5000">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Tables Architected</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;about&gt;</span>
+                <h2 class="section-title">Who I Am</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <p class="about-lead">
+                        Data Engineer with hands-on experience designing and operating
+                        <span class="highlight">production-grade data platforms</span> on Microsoft Fabric and Azure.
+                    </p>
+                    <p>
+                        Comfortable owning the full lifecycle — from architecture design and
+                        cross-border stakeholder alignment, through ETL development and environment
+                        management (dev/test/prod), to production monitoring and governed BI delivery.
+                    </p>
+                    <p>
+                        I focus on building systems that are <span class="highlight">metadata-driven</span>,
+                        <span class="highlight">Git-trackable</span>, and <span class="highlight">scalable by design</span>
+                        rather than by effort.
+                    </p>
+                </div>
+                <div class="about-cards reveal">
+                    <div class="info-card">
+                        <div class="info-card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        </div>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Binh Duong, Vietnam</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                        </div>
+                        <div>
+                            <h4>Education</h4>
+                            <p>UEH — Corporate Accounting</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+                        </div>
+                        <div>
+                            <h4>Languages</h4>
+                            <p>Vietnamese (Native) · English (Professional)</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <div>
+                            <h4>Certifications</h4>
+                            <p>DP-700 (in progress) · HackerRank SQL · Google Analytics</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;skills&gt;</span>
+                <h2 class="section-title">Tech Arsenal</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category reveal" style="--cat-delay: 0">
+                    <div class="skill-category-header">
+                        <div class="skill-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/></svg>
+                        </div>
+                        <h3>Platform & Cloud</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Microsoft Fabric</span>
+                        <span class="skill-tag">Lakehouse</span>
+                        <span class="skill-tag">Warehouse</span>
+                        <span class="skill-tag">Pipeline</span>
+                        <span class="skill-tag">Dataflow Gen2</span>
+                        <span class="skill-tag">Spark</span>
+                        <span class="skill-tag">Azure Data Factory</span>
+                        <span class="skill-tag">Logic Apps</span>
+                        <span class="skill-tag">Functions</span>
+                        <span class="skill-tag">SQL DB</span>
+                        <span class="skill-tag">Key Vault</span>
+                        <span class="skill-tag">Azure OpenAI</span>
+                    </div>
+                </div>
+                <div class="skill-category reveal" style="--cat-delay: 1">
+                    <div class="skill-category-header">
+                        <div class="skill-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>
+                        </div>
+                        <h3>Languages & ETL</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag featured">PySpark</span>
+                        <span class="skill-tag featured">Spark SQL</span>
+                        <span class="skill-tag featured">T-SQL</span>
+                        <span class="skill-tag featured">Python</span>
+                        <span class="skill-tag">DAX</span>
+                        <span class="skill-tag">Power Query (M)</span>
+                        <span class="skill-tag">dbt</span>
+                        <span class="skill-tag">Delta Lake</span>
+                        <span class="skill-tag">MERGE / Upsert</span>
+                    </div>
+                </div>
+                <div class="skill-category reveal" style="--cat-delay: 2">
+                    <div class="skill-category-header">
+                        <div class="skill-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                        </div>
+                        <h3>BI & Visualization</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag featured">Power BI</span>
+                        <span class="skill-tag">DirectLake</span>
+                        <span class="skill-tag">DirectQuery</span>
+                        <span class="skill-tag">Import</span>
+                        <span class="skill-tag">Deneb (Vega-Lite)</span>
+                        <span class="skill-tag">HTML Visual</span>
+                        <span class="skill-tag">Tabular Editor</span>
+                        <span class="skill-tag">Streamlit</span>
+                    </div>
+                </div>
+                <div class="skill-category reveal" style="--cat-delay: 3">
+                    <div class="skill-category-header">
+                        <div class="skill-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+                        </div>
+                        <h3>Orchestration</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Fabric Data Pipeline</span>
+                        <span class="skill-tag">Airflow</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Power Automate</span>
+                        <span class="skill-tag">DAG Design</span>
+                        <span class="skill-tag">Scheduling</span>
+                    </div>
+                </div>
+                <div class="skill-category reveal" style="--cat-delay: 4">
+                    <div class="skill-category-header">
+                        <div class="skill-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                        </div>
+                        <h3>Governance & Ops</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">OneLake</span>
+                        <span class="skill-tag">RLS / OLS / CLS</span>
+                        <span class="skill-tag">Data Dictionary</span>
+                        <span class="skill-tag">Lineage</span>
+                        <span class="skill-tag">Schema Validation</span>
+                        <span class="skill-tag">Tenant Admin</span>
+                        <span class="skill-tag">Git Integration</span>
+                    </div>
+                </div>
+                <div class="skill-category reveal" style="--cat-delay: 5">
+                    <div class="skill-category-header">
+                        <div class="skill-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                        </div>
+                        <h3>AI & Tools</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">OpenAI API</span>
+                        <span class="skill-tag">MCP</span>
+                        <span class="skill-tag">Copilot</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">REST API</span>
+                        <span class="skill-tag">Graph API</span>
+                        <span class="skill-tag">VS Code</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;experience&gt;</span>
+                <h2 class="section-title">Career Journey</h2>
+            </div>
+            <div class="timeline">
+                <!-- Job 1 -->
+                <div class="timeline-item reveal" style="--item-delay: 0">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <span class="timeline-date">Feb 2026 — Present</span>
+                                <h3 class="timeline-role">Data Engineer</h3>
+                                <p class="timeline-company">
+                                    Ashley Furniture Industries (VN Team)
+                                    <span class="company-note">World's largest furniture manufacturer · Binh Duong</span>
+                                </p>
+                            </div>
+                            <div class="timeline-badge current">Current</div>
+                        </div>
+                        <p class="timeline-summary">
+                            Part of the DataHub Vietnam team under Global Supply Chain Analytics — responsible for DE platform setup on Microsoft Fabric.
+                            Cross-border team (VN + US), architecting a multi-layer lakehouse over <span class="highlight">5,000+ structured tables</span>
+                            with <span class="highlight">30+ years of operational history</span>.
+                        </p>
+                        <ul class="timeline-achievements">
+                            <li>
+                                <span class="achievement-icon">&#9670;</span>
+                                Designed metadata-driven platform with three clean separations: transformation SQL, execution config, and processing engines — enabling domain-parallel execution with three-level blast-radius isolation
+                            </li>
+                            <li>
+                                <span class="achievement-icon">&#9670;</span>
+                                Conducted deep research into OneLake storage, Lakehouse internals, and Fabric administration. Evaluated Airflow vs Fabric Data Pipeline with US Enterprise team
+                            </li>
+                            <li>
+                                <span class="achievement-icon">&#9670;</span>
+                                Implemented schema validation as pre-execution gate + config-driven DQ framework with 4 checkpoint gates — reducing incident response from hours to minutes
+                            </li>
+                            <li>
+                                <span class="achievement-icon">&#9670;</span>
+                                Designed self-populating data dictionary — auto-deriving all metadata from pipeline config. Zero manual documentation, full lineage from single source of truth
+                            </li>
+                        </ul>
+                        <div class="timeline-tech">
+                            <span>Microsoft Fabric</span>
+                            <span>PySpark</span>
+                            <span>Spark SQL</span>
+                            <span>Delta Lake</span>
+                            <span>T-SQL</span>
+                            <span>OneLake</span>
+                            <span>Airflow</span>
+                            <span>Power BI</span>
+                            <span>Git</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job 2 -->
+                <div class="timeline-item reveal" style="--item-delay: 1">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <span class="timeline-date">Jan 2024 — Jan 2026</span>
+                                <h3 class="timeline-role">Analytics Engineer · Power Platform Developer</h3>
+                                <p class="timeline-company">
+                                    Ecentric
+                                    <span class="company-note">E-commerce solutions & digital operations · Ho Chi Minh City</span>
+                                </p>
+                            </div>
+                            <div class="timeline-badge duration">2 Years</div>
+                        </div>
+                        <p class="timeline-summary">
+                            Built the company's entire data and automation infrastructure from scratch — replacing scattered manual Excel workflows
+                            across 4 departments with a centralized, governed platform. Reduced reporting workload by <span class="highlight">80%</span>
+                            within the first 6 months.
+                        </p>
+                        <ul class="timeline-achievements">
+                            <li>
+                                <span class="achievement-icon">&#9670;</span>
+                                Built automated data collection pipelines (web scraping, REST API, file parsing) + Power Automate. Centralized orchestration via Docker + Airflow
+                            </li>
+                            <li>
+                                <span class="achievement-icon">&#9670;</span>
+                                Implemented near real-time dashboards using KQL and Eventhouse on Fabric for live order tracking. Built full alert system via Power Automate + Teams
+                            </li>
+                            <li>
+                                <span class="achievement-icon">&#9670;</span>
+                                Designed Fabric platform (Lakehouse, Warehouse, Pipeline, Dataflow Gen2) with RLS/OLS/CLS governance. Co-developed analytics web app (React + Streamlit)
+                            </li>
+                            <li>
+                                <span class="achievement-icon">&#9670;</span>
+                                Built AI-assisted tooling via MCP for automated DAX generation; integrated Azure OpenAI into the Fabric ecosystem
+                            </li>
+                        </ul>
+                        <div class="timeline-tech">
+                            <span>Microsoft Fabric</span>
+                            <span>KQL / Eventhouse</span>
+                            <span>Power BI</span>
+                            <span>Python</span>
+                            <span>Power Automate</span>
+                            <span>React</span>
+                            <span>Docker</span>
+                            <span>Airflow</span>
+                            <span>Azure OpenAI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job 3 -->
+                <div class="timeline-item reveal" style="--item-delay: 2">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <span class="timeline-date">Feb 2023 — Dec 2023</span>
+                                <h3 class="timeline-role">Data Analyst → Data Analyst / Engineer</h3>
+                                <p class="timeline-company">
+                                    ADP
+                                    <span class="company-note">Global leader in HR & payroll technology · Remote</span>
+                                </p>
+                            </div>
+                            <div class="timeline-badge duration">11 Months</div>
+                        </div>
+                        <p class="timeline-summary">
+                            Started as data analyst on a large-scale HR/payroll platform, progressively taking on data engineering responsibilities
+                            at enterprise scale. First professional exposure to production-grade data workflows.
+                        </p>
+                        <ul class="timeline-achievements">
+                            <li>
+                                <span class="achievement-icon">&#9670;</span>
+                                Built and maintained ETL pipelines using dbt to transform, test, and load data into PostgreSQL — handling multiple HR modules with incremental models
+                            </li>
+                            <li>
+                                <span class="achievement-icon">&#9670;</span>
+                                Developed Power BI reports and semantic models with dynamic filtering, time intelligence, and drill-through navigation
+                            </li>
+                            <li>
+                                <span class="achievement-icon">&#9670;</span>
+                                Established data governance foundations: data dictionary standards, source-of-truth documentation, naming conventions, and lightweight lineage map
+                            </li>
+                        </ul>
+                        <div class="timeline-tech">
+                            <span>dbt</span>
+                            <span>PostgreSQL</span>
+                            <span>Power BI</span>
+                            <span>DAX</span>
+                            <span>Python</span>
+                            <span>SQL</span>
+                            <span>Data Governance</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;projects&gt;</span>
+                <h2 class="section-title">GitHub Vibe Code</h2>
+                <p class="section-subtitle">Open-source projects built with passion — from MCP servers to full-stack data pipelines</p>
+            </div>
+            <div class="projects-grid">
+
+                <!-- Project 1: fabric-mcp-dynamic -->
+                <div class="project-card featured reveal">
+                    <div class="project-card-glow"></div>
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                        </div>
+                        <span class="project-badge badge-mcp">MCP Server</span>
+                    </div>
+                    <h3 class="project-name">fabric-mcp-dynamic</h3>
+                    <p class="project-desc">Custom MCP server wrapping Azure REST API + OneLake into 27 reusable tools for Claude Code. Unique value: DQ checks, Lineage, Delta log replay, D3.js Visualization. Auth via <code>az login</code> — no Service Principal needed.</p>
+                    <div class="project-tech">
+                        <span>Python</span><span>FastMCP</span><span>PyArrow</span><span>Delta Lake</span><span>httpx</span>
+                    </div>
+                    <a href="https://github.com/ankinguyen-engineer-2002/fabric-mcp-dynamic" class="project-link" target="_blank" rel="noopener">
+                        <span>View Repository</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7.8H7.8"/></svg>
+                    </a>
+                </div>
+
+                <!-- Project 2: Fabric-AI-Gateway -->
+                <div class="project-card featured reveal">
+                    <div class="project-card-glow"></div>
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                        </div>
+                        <span class="project-badge badge-mcp">MCP Server</span>
+                    </div>
+                    <h3 class="project-name">Fabric-AI-Gateway</h3>
+                    <p class="project-desc">MCP Server for Microsoft Fabric Cloud — native macOS. Two modes: Semantic Model (13 tools: DAX, measures, XMLA) and Data Warehouse (SQL, profiling, sampling). Supports Gemini CLI & Codex CLI.</p>
+                    <div class="project-tech">
+                        <span>Python</span><span>MCP</span><span>REST API</span><span>XMLA</span><span>pyodbc</span>
+                    </div>
+                    <a href="https://github.com/ankinguyen-engineer-2002/Fabric-AI-Gateway" class="project-link" target="_blank" rel="noopener">
+                        <span>View Repository</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7.8H7.8"/></svg>
+                    </a>
+                </div>
+
+                <!-- Project 3: powerbi-ai-gateway -->
+                <div class="project-card featured reveal">
+                    <div class="project-card-glow"></div>
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                        </div>
+                        <span class="project-badge badge-tutorial">Tutorial</span>
+                    </div>
+                    <h3 class="project-name">powerbi-ai-gateway</h3>
+                    <p class="project-desc">Step-by-step tutorial: connect AI CLI (Gemini/Codex) to Power BI Desktop via MCP. macOS-native setup bridging to Windows VM through Cloudflare tunnel. Read/write tables, measures, DAX queries via natural language.</p>
+                    <div class="project-tech">
+                        <span>MCP</span><span>Power BI</span><span>Cloudflare</span><span>Gemini CLI</span><span>Codex CLI</span>
+                    </div>
+                    <a href="https://github.com/ankinguyen-engineer-2002/powerbi-ai-gateway" class="project-link" target="_blank" rel="noopener">
+                        <span>View Repository</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7.8H7.8"/></svg>
+                    </a>
+                </div>
+
+                <!-- Project 4: ec-automation-management -->
+                <div class="project-card reveal">
+                    <div class="project-card-glow"></div>
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+                        </div>
+                        <span class="project-badge badge-pipeline">Pipeline</span>
+                    </div>
+                    <h3 class="project-name">ec-automation-management</h3>
+                    <p class="project-desc">Production automation platform for eCentric: 3-task system covering data ingestion from shared folders, Excel Power Query auto-refresh, and remote Power Automate Desktop orchestration (11 flows) — all via Airflow + Docker.</p>
+                    <div class="project-tech">
+                        <span>Python</span><span>Airflow</span><span>Docker</span><span>Power Automate</span><span>HTTP Agent</span>
+                    </div>
+                    <a href="https://github.com/ankinguyen-engineer-2002/ec-automation-management" class="project-link" target="_blank" rel="noopener">
+                        <span>View Repository</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7.8H7.8"/></svg>
+                    </a>
+                </div>
+
+                <!-- Project 5: Hybrid_Engineer_Dota2 -->
+                <div class="project-card reveal">
+                    <div class="project-card-glow"></div>
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/></svg>
+                        </div>
+                        <span class="project-badge badge-pipeline">Pipeline</span>
+                    </div>
+                    <h3 class="project-name">Hybrid_Engineer_Dota2</h3>
+                    <p class="project-desc">Full data pipeline for Dota 2 analytics: OpenDota API ingestion, Medallion Architecture (Bronze/Silver/Gold) with dbt transformations, Airflow orchestration on Docker, and PostgreSQL warehouse. CSV export for BI.</p>
+                    <div class="project-tech">
+                        <span>Python</span><span>dbt</span><span>PostgreSQL</span><span>Airflow</span><span>Docker</span>
+                    </div>
+                    <a href="https://github.com/ankinguyen-engineer-2002/Hybrid_Engineer_Dota2" class="project-link" target="_blank" rel="noopener">
+                        <span>View Repository</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7.8H7.8"/></svg>
+                    </a>
+                </div>
+
+                <!-- Project 6: E2E Supply Chain -->
+                <div class="project-card reveal">
+                    <div class="project-card-glow"></div>
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"/><path d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"/></svg>
+                        </div>
+                        <span class="project-badge badge-analytics">Analytics</span>
+                    </div>
+                    <h3 class="project-name">E2E-Supply-Chain-Analytics</h3>
+                    <p class="project-desc">End-to-end supply chain intelligence: Medallion Architecture on Docker + PostgreSQL + dbt. Star schema dimensional modeling for Profitability, OTIF, and Risk Management analytics with Power BI.</p>
+                    <div class="project-tech">
+                        <span>dbt</span><span>PostgreSQL</span><span>Docker</span><span>Power BI</span><span>Python</span>
+                    </div>
+                    <a href="https://github.com/ankinguyen-engineer-2002/E2E-_-Supply-Chain-Analytics" class="project-link" target="_blank" rel="noopener">
+                        <span>View Repository</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7.8H7.8"/></svg>
+                    </a>
+                </div>
+
+                <!-- Project 7: fabric_template_pipeline_decomposition -->
+                <div class="project-card reveal">
+                    <div class="project-card-glow"></div>
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
+                        </div>
+                        <span class="project-badge badge-viz">Visualization</span>
+                    </div>
+                    <h3 class="project-name">Pipeline Decomposition Tree</h3>
+                    <p class="project-desc">Interactive D3.js visualization of Fabric ETL pipeline workflows — auto-generated from live workspace metadata via MCP. Medallion layer color coding, row counts, load types, and execution status.</p>
+                    <div class="project-tech">
+                        <span>D3.js</span><span>MCP</span><span>Fabric</span><span>GitHub Pages</span><span>JavaScript</span>
+                    </div>
+                    <a href="https://github.com/ankinguyen-engineer-2002/fabric_template_pipeline_decomposition" class="project-link" target="_blank" rel="noopener">
+                        <span>View Repository</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7.8H7.8"/></svg>
+                    </a>
+                </div>
+
+                <!-- Project 8: LLM_JOBs -->
+                <div class="project-card reveal">
+                    <div class="project-card-glow"></div>
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                        </div>
+                        <span class="project-badge badge-ai">AI-Powered</span>
+                    </div>
+                    <h3 class="project-name">Job Radar (LLM_JOBs)</h3>
+                    <p class="project-desc">Serverless job intelligence pipeline scraping 12+ platforms (LinkedIn, Indeed, TopCV, ITviec...), enriched by Gemini 2.0 Flash AI. Cyberpunk glassmorphism dashboard. $0 cost via GitHub Actions + Pages.</p>
+                    <div class="project-tech">
+                        <span>Python</span><span>Gemini 2.0</span><span>GitHub Actions</span><span>JavaScript</span><span>CSS3</span>
+                    </div>
+                    <a href="https://github.com/ankinguyen-engineer-2002/LLM_JOBs" class="project-link" target="_blank" rel="noopener">
+                        <span>View Repository</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7.8H7.8"/></svg>
+                    </a>
+                </div>
+
+                <!-- Project 9: News_Automation -->
+                <div class="project-card reveal">
+                    <div class="project-card-glow"></div>
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/></svg>
+                        </div>
+                        <span class="project-badge badge-pipeline">Pipeline</span>
+                    </div>
+                    <h3 class="project-name">News_Automation</h3>
+                    <p class="project-desc">Daily engineering intelligence pipeline: automated RSS/API/scraping discovery, AI-powered synthesis, and MkDocs Material publishing to GitHub Pages with Telegram notifications. Fully cloud-only.</p>
+                    <div class="project-tech">
+                        <span>Python</span><span>MkDocs</span><span>GitHub Actions</span><span>Telegram API</span><span>LLM</span>
+                    </div>
+                    <a href="https://github.com/ankinguyen-engineer-2002/News_Automation" class="project-link" target="_blank" rel="noopener">
+                        <span>View Repository</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7.8H7.8"/></svg>
+                    </a>
+                </div>
+
+            </div>
+            <div class="projects-cta reveal">
+                <a href="https://github.com/ankinguyen-engineer-2002" class="btn btn-ghost" target="_blank" rel="noopener">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    <span>View All Repositories</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section" id="education">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;education&gt;</span>
+                <h2 class="section-title">Education & Certs</h2>
+            </div>
+            <div class="edu-grid">
+                <div class="edu-card reveal">
+                    <div class="edu-card-glow"></div>
+                    <div class="edu-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+                    </div>
+                    <h3>UEH University</h3>
+                    <p class="edu-degree">Corporate Accounting</p>
+                    <p class="edu-period">2020 — 2024</p>
+                    <p class="edu-note">Business domain in finance — direct stakeholder collaboration</p>
+                </div>
+                <div class="edu-card reveal">
+                    <div class="edu-card-glow"></div>
+                    <div class="edu-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+                    </div>
+                    <h3>DP-700</h3>
+                    <p class="edu-degree">Fabric Data Engineer Associate</p>
+                    <p class="edu-period">In Progress</p>
+                    <p class="edu-note">Microsoft Certified — Fabric Data Engineering</p>
+                </div>
+                <div class="edu-card reveal">
+                    <div class="edu-card-glow"></div>
+                    <div class="edu-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+                    </div>
+                    <h3>HackerRank SQL</h3>
+                    <p class="edu-degree">SQL Advanced Certificate</p>
+                    <p class="edu-period">Completed</p>
+                    <p class="edu-note">Advanced SQL problem-solving</p>
+                </div>
+                <div class="edu-card reveal">
+                    <div class="edu-card-glow"></div>
+                    <div class="edu-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                    </div>
+                    <h3>Google</h3>
+                    <p class="edu-degree">Data Analytics Certificate</p>
+                    <p class="edu-period">Completed</p>
+                    <p class="edu-note">Foundations of data analytics</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section section-contact" id="contact">
+        <div class="container">
+            <div class="contact-wrapper reveal">
+                <div class="contact-glow"></div>
+                <span class="section-tag">&lt;contact&gt;</span>
+                <h2 class="contact-title">Let's Build Something<br><span class="highlight">Together</span></h2>
+                <p class="contact-text">
+                    Open to Data Engineering and Analytics Engineering roles.
+                    Let's talk about building production-grade data platforms.
+                </p>
+                <div class="contact-links">
+                    <a href="mailto:nakietueh3103@gmail.com" class="contact-link">
+                        <div class="contact-link-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                        </div>
+                        <div>
+                            <span class="contact-link-label">Email</span>
+                            <span class="contact-link-value">nakietueh3103@gmail.com</span>
+                        </div>
+                        <svg class="contact-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7.8H7.8"/></svg>
+                    </a>
+                    <a href="https://github.com/ankinguyen-engineer-2002" class="contact-link" target="_blank" rel="noopener">
+                        <div class="contact-link-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        </div>
+                        <div>
+                            <span class="contact-link-label">GitHub</span>
+                            <span class="contact-link-value">github.com/ankinguyen-engineer-2002</span>
+                        </div>
+                        <svg class="contact-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7.8H7.8"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Aric Nguyen. Designed with passion for data.</p>
+                <p class="footer-tagline">Metadata-driven · Git-trackable · Scalable by design</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
